@@ -1,0 +1,125 @@
+
+************************************
+*   20  DEFEASIBLE STATEMENTS      *
+************************************
+HighBudgetMovie SubclassOf Budget
+HighBudgetMovie SubclassOf hasReception some CriticallyAcclaimedMovie
+HighBudgetMovie SubclassOf not (hasReception some CriticallyAcclaimedMovie)
+
+************************************************************************************************************************************************
+
+Musical SubclassOf hasTone some Lighthearted
+DarkMusical SubclassOf Musical
+DarkMusical SubclassOf not (hasTone some Lighthearted)
+
+************************************************************************************************************************************************
+
+SatiricalDarkMusical SubclassOf DarkMusical
+SatiricalDarkMusical SubclassOf hasEnding some IronicEnding
+
+************************************************************************************************************************************************
+
+CultSatiricalDarkMusical SubclassOf SatiricalDarkMusical
+CultSatiricalDarkMusical SubclassOf not (hasEnding some IronicEnding) or (hasEnding some TragicEnding)
+
+************************************************************************************************************************************************
+
+Comedy SubclassOf (hasTone some Lighthearted)
+DarkComedy SubclassOf Comedy
+DarkComedy SubclassOf not (hasTone some Lighthearted)
+
+************************************************************************************************************************************************
+
+RomanticComedy SubclassOf hasEnding some HappyCoupleTogether
+BittersweetRomanticComedy SubclassOf not (hasEnding some HappyCoupleTogether)
+
+************************************************************************************************************************************************
+
+Animation SubclassOf (hasTargetAudience some Children)
+AdultAnimation SubclassOf not (hasTargetAudience some Children)
+
+************************************************************************************************************************************************
+
+Thriller SubclassOf (hasTone some Violence)
+PsychologicalThriller SubclassOf not (hasTone some Violence)
+
+************************************************************************************************************************************************
+
+FemaleProtagonistAction SubclassOf Action
+FemaleProtagonistAction EquivalentTo Action and (hasProtagonist some (Actress and Person))
+
+************************************************************************************************************************************************
+
+Horror SubclassOf hasTone some SupernaturalTone
+PsychologicalHorror SubclassOf not (hasTone some SupernaturalTone)
+
+************************************************************************************************************************************************
+
+Drama SubclassOf hasEnding some ResolvedEnding
+AmbiguousEndingDrama SubclassOf not (hasEnding some ResolvedEnding)
+AmbiguousEndingDrama EquivalentTo Drama and (hasEnding some AmbiguousEnding)
+
+************************************************************************************************************************************************
+
+Family SubclassOf (hasTargetAudience some Children)
+MatureFamily SubclassOf not (hasTargetAudience some Children)
+MatureFamily EquivalentTo Family and (hasTargetAudience some Adult)
+
+************************************************************************************************************************************************
+
+Western SubclassOf(hasConflict some MoralClarity)
+RevisionistWestern SubclassOf not hasConflict some MoralClarity)
+RevisionistWestern EquivalentTo Western and (hasConflict some MoralAmbiguity)
+
+************************************************************************************************************************************************
+
+Documentary SubclassOf(hasStyle some ObjectivePresentation)
+BiasedDocumentary SubclassOf not (hasStyle some ObjectivePresentation)
+
+
+************************************************************************************************************************************************
+
+ScienceFiction SubclassOf hasSetting some (Future or OuterSpace)
+PresentDaySciFi SubclassOf not hasSetting some (Future or OuterSpace)
+
+************************************************************************************************************************************************
+
+Sequel SubclassOf followsGenreOf some OriginalMovie
+GenreShiftSequel SubclassOf not (followsGenreOf some OriginalMovie)
+
+************************************************************************************************************************************************
+
+Movie SubclassOf hasEnding some ProtagonistSurvivesEnding
+ProtagonistDiesMovie SubclassOf not (hasEnding some ProtagonistSurvivesEnding)
+
+************************************************************************************************************************************************
+
+NolanMovie SubclassOf hasBudget some HighBudgetMovie
+LowBudgetNolanMovie not (hasBudget some HighBudgetMovie)
+
+************************************************************************************************************************************************
+
+MajorStudioMovie SubclassOf hasReception some BoxOfficeHitMovie
+MajorStudioBoxOfficeFailure SubclassOf not (hasReception some BoxOfficeHitMovie)
+
+************************************************************************************************************************************************
+
+Movie and (hasActor some FamousActor) SubClassOf hasReception some BoxOfficeHitMovie
+FamousActorBoxOfficeFailure and Movie and (hasActor some FamousActor) SubClassOf not (hasReception some BoxOfficeHitMovie)
+
+************************************************************************************************************************************************
+
+Movie and producedBy some MajorStudio SubClassOf: (hasBoxOfficePerformance some BlockbusterMovie)
+
+
+************************************************************************************************************************************************
+
+CGIMovieWith2DElements SubclassOf: CGI
+CGIMovieWith2DElements SubclassOf: usesTechnique some HandDrawnAnimation
+
+************************************************************************************************************************************************
+
+SpirituallyAccurateBiopic SubclassOf: CreativeLibertyBiopic
+SpirituallyAccurateBiopic SubclassOf: hasAccuracy some HistoricalAccurate
+SpirituallyAccurateBiopic SubclassOf: 
+

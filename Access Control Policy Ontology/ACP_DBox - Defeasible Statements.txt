@@ -1,0 +1,103 @@
+************************************
+*       31 DEFEASIBLE USE CASES    *
+************************************
+
+AuthorizedGridOperator and (hasActiveFailSafe some (AIFailSafeSystem and (hasVerificationStatus some OutdatedUnverifiedStatus))) and (hasApprovalFrom some Supervisor) and (hasRiskPrediction some HighFailureRiskPrediction) and (isInContextOf some PeakOverloadRiskContext) SubClassOf not (canIssueCommand some GridControlCommand)
+
+************************************************************************************************************************************************
+AutonomousVehicle and (not (hasStatus some CriticalSensorFailure)) and (hasCapability some AIRedundancyMode) and (hasStatus some LostContactWithControlCenter) and (isInContext some GeofencedOperationalArea) and (isInContext some NearHospital) and (isInContext some UnsafeWeatherCondition) and (isPerformingAction some EmergencyManeuver) SubClassOf OperatesAutonomously
+
+************************************************************************************************************************************************
+AutopilotSystem and (isOverriddenBy some Pilot) SubClassOf not (controls some FlightControlSurface)
+
+************************************************************************************************************************************************
+Clerk and (not (accesses some NationalSecurityCaseFile)) and (hasAssignedAccessBy some Judge) and (hasClearanceLevel some NSAClearanceLevel) SubClassOf canAccess some SealedCaseFile
+
+************************************************************************************************************************************************
+ComplianceInvestigationContractor and (not (hasSecurityClearance some Confidential)) SubClassOf not (canAccess some AuditLog)
+
+************************************************************************************************************************************************
+CustomerServiceRepresentative and (hasCustomerAuthorization some RefundVerification) and (hasTransactionStatus some Completed) and (isLoggedFor some Audit) SubClassOf hasAccessTo some PaymentCardDetails
+
+************************************************************************************************************************************************
+DevOpsEngineer and (deploysArtefact some CriticalApplication) and (isInContext some ChangeFreezeActive) SubClassOf not (canPerformActionOn some StagingEnvironment)
+
+************************************************************************************************************************************************
+DevServerMirroringProd and (hasStatus some CriticalVulnerabilityPatch) and (isInContext some ProductionCodeFreezeContext) SubClassOf receivesPatch some StandardPatch
+
+************************************************************************************************************************************************
+Device and (isConnectedToNetworkType some CorporateNetworkSegment) and (isInContext some HighNetworkTrafficContext) and (isInContext some SecurityScanRequiringDevToolsContext) SubClassOf canAccess some DevelopmentToolService
+
+************************************************************************************************************************************************
+Doctor and (hasStatus some IsOnStrike) and (hasStatus some IsUnderInvestigation) and (isGranted some ExplicitEmergencyAccessOverride) and (isInContext some EmergencySituation) SubClassOf canAccess some PatientRecord
+
+************************************************************************************************************************************************
+EmergencyVehicle and (hasOverrideFrom some Dispatcher) and (hasSensorStatus some SensorFailureStatus) and (isAuthorizedForStandby some HighRiskStandbyContext) and (isOnActiveCall some CallStatus) SubClassOf canAccess some RestrictedLane
+
+************************************************************************************************************************************************
+Employee and (hasStatus some IsOnLeave) and (isGranted some TemporarySupervisedAccess) SubClassOf hasAccessTo some InternalKnowledgeBase
+
+************************************************************************************************************************************************
+Employee and (not (possessesCredential some SpecialAfterHoursBadge)) and (isInContext some OutsideWorkingHoursContext) and (isInGlobalContext some EmergencyEvacuationContext) SubClassOf canEnterPremises some OfficeBuilding
+
+************************************************************************************************************************************************
+GovernmentEmployee and (not (hasNeedToKnow some DocumentScope)) and (hasClearanceLevel some TopSecret) and (hasOrderFrom some President) and (isLoggedFor some PostCrisisReview) SubClassOf hasAccessTo some TopSecretDocument
+
+************************************************************************************************************************************************
+(HRIntern and (accesses some (EmployeeRecord and (hasConfidentialityFlag some ConfidentialityFlagActive))) and (hasTemporaryAccessGrant some AuditPurposeTemporary)) and (not (isAuditRequestSignedBy some DataProtectionOfficer)) and (isInAuditEventContext some LegalComplianceAuditContext) SubClassOf not (canViewRecord some EmployeeRecord)
+
+************************************************************************************************************************************************
+ITAdministrator and OutsideMaintenanceWindow SubClassOf not (InstallSoftware)
+
+************************************************************************************************************************************************
+LicensedDriver and (hasAuthorizationFrom some SeniorDispatcher) and (hasStatus some OnTrafficViolationProbation) and (isUnder some GPSMonitoring) SubClassOf hasPermissionToOperate some CompanyVehicle
+
+************************************************************************************************************************************************
+LegacyPayrollSystem and SensitiveSystem and (hasTemporaryOverride some WithFrequentMonitoring) and (hasUpgrade some Completed) SubClassOf not (requires some MultiFactorAuthentication)
+
+************************************************************************************************************************************************
+NewCustomer and (hasAuthorizationFrom some CustomerServiceManager) and (hasStatus some FlaggedForCouponAbuse) and (hasValidCoupon some DiscountCoupon) and (hasValidCoupon some WelcomeCoupon) and (isInContext some FirstPurchasePromoActive) and (orderType some HighValueOrder) and (placesOrder some Order) SubClassOf canApplyCouponToOrder some Order
+
+************************************************************************************************************************************************
+NewAdmin and (hasStatus some ProbationPeriod) SubClassOf not (canAccess some SystemConfiguration)
+
+************************************************************************************************************************************************
+OutboundNetworkTraffic and (hasDestination some MaliciousIP) and (hasSource some WhitelistedIPSubnet) and (hasTime some MaintenanceWindow) SubClassOf isAllowed some owl:Thing
+
+************************************************************************************************************************************************
+Psychiatrist and (hasPatient some NonPsychiatricCase) SubClassOf not (canAccess some PatientRecord)
+
+************************************************************************************************************************************************
+RemoteAccess and ((hasSource some UnapprovedGeoRegion) or (hasSource some UntrustedNetwork)) and (hasRole some CertifiedThirdPartyEngineer) and (hasTarget some OTSystem) and (hasTime some ScheduledMaintenanceWindow) SubClassOf not (isAllowed some owl:Thing)
+
+************************************************************************************************************************************************
+ScholarshipHolder and (hasAcademicStanding some AcademicProbationStatus) and (hasApprovalFrom some Advisor) and (hasFeeStatus some UnpaidFeesStatus) and (isUnderReviewFor some MisconductReviewContext) SubClassOf not (canAccess some CourseMaterial)
+
+************************************************************************************************************************************************
+SeniorIntelligenceAnalyst and ((hasJudicialReview some 
+(JudicialOversightCommitteeReviewActive and (hasInjunctionAgainstAccess some 
+(AccessRestriction and (appliesToAnalyst some SeniorIntelligenceAnalyst) and (appliesToDocument some TopSecretCodewordDocument))))) and (hasPresidentialWaiver some 
+(PresidentialFindingActive and (relatesToDocument some TopSecretCodewordDocument) and (waivesCIRestrictionForAccess some AccessPermission)))) and (not (hasNeedToKnowForDocument some TopSecretCodewordDocument)) and (hasStatus some IsUnderCIInvestigation) and (isAccessAuthorizedBy some IntelligenceAgencyDirector) and (isInContext some ImminentNationalSecurityThreat) SubClassOf not (canAccess some TopSecretCodewordDocument)
+
+************************************************************************************************************************************************
+SeniorStaff and (hasStatus some CyberLockDown) SubClassOf not (canOverride some ClassificationLabel)
+
+************************************************************************************************************************************************
+SmallPracticeEmployee and (not (hasManagerReview some FinancialTransaction)) SubClassOf not (hasSoleControlOver some FinancialTransaction)
+
+************************************************************************************************************************************************
+SoftwareUpdate and (hasStatus some FailedQATesting) SubClassOf not (isDeployedTo some ProductionEnvironment)
+
+************************************************************************************************************************************************
+TrainingModeTraineeAccountant and (hasStatus some IsUnderInvestigation) SubClassOf not (canAccess some AuditLog)
+
+************************************************************************************************************************************************
+User and (not (NeedToKnow)) and (hasClearanceLevel some TopSecret) and (hasStatus some CriticalNationalSecurity) and (isDuring some OutsideWorkingHoursContext) SubClassOf not (hasAccessTo some ResourceWithSecurityLabel)
+
+************************************************************************************************************************************************
+(VerifiedSeller and (hasFlag some FakeReviewsFlag)) and (hasPersistentComplaints some BuyerComplaints) and (isClearedBy some QualityAssuranceTeam) and (isWhitelistedBy some MarketplaceAdmin) SubClassOf canLaunchListing some ProductListing
+
+************************************************************************************************************************************************
+
+
+************************************************************************************************************************************************

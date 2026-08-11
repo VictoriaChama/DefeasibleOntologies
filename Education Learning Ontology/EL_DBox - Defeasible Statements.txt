@@ -1,0 +1,89 @@
+*************************************
+*    20 DEFEASIBLE USE CASES        *
+*************************************
+
+ActiveLearning SubClassOf increasesUnderstanding some Student
+ActiveLearning and (hasParticipant some UnpreparedStudents) SubClassOf not (increasesUnderstanding some Student)
+
+************************************************************************************************************************************************
+DigitalBadge SubClassOf increasesEmployability some Student
+DigitalBadge and (hasFeature some UnrecognizedIssuer) SubClassOf not (increasesEmployability some Student)
+
+
+************************************************************************************************************************************************
+FormativeAssessmentCycle SubClassOf (improvesDevelopment some Student)
+FormativeAssessmentCycle and (hasFeature some DelayedFeedback) SubClassOf not (improvesDevelopment some Student)
+
+************************************************************************************************************************************************
+GamifiedLearning and SubClassOf (increasesEngagementOf some Student)
+GamifiedLearning and (hasEffect some UnderminesIntrinsicMotivation) SubClassOf not (increasesEngagementOf some Student)
+
+************************************************************************************************************************************************
+GoodInstructorFeedback SubClassOf (increasesMotivationOf some Student)
+GoodInstructorFeedback and (hasFeature some InconsistentAmbiguous) SubClassOf not (increasesMotivationOf some Student)
+
+************************************************************************************************************************************************
+GroupWork SubClassOf (improvesRetention some Student)
+GroupWork and SevereSocialAnxietyStudent SubClassOf not (improvesRetention some Student)
+
+************************************************************************************************************************************************
+Student SubClassOf (learnsEffectively some Concept)
+HighPriorKnowledgeLearner SubClassOf Student
+HighPriorKnowledgeLearner and (studiesWith some WorkedExample) SubClassOf not (learnsEffectively some Concept)
+
+
+************************************************************************************************************************************************
+HighSESStudent SubClassOf (hasHigherAverageOutcome some Outcome)
+HighSESStudent and (hasCondition some ExtremeNonAcademicStress) SubClassOf not (hasHigherAverageOutcome some Outcome)
+
+************************************************************************************************************************************************
+ImmediateSummativeTest SubClassOf (revealsMastery some Student)
+ImmediateSummativeTest and (hasCondition some HighTestAnxiety) SubClassOf not (revealsMastery some Student)
+
+************************************************************************************************************************************************
+Internship SubClassOf (increasesEmployability some Student)
+Internship and (hasFeature some MenialTasks) SubClassOf not (increasesEmployability some Student)
+
+************************************************************************************************************************************************
+NoviceResearcher SubClassOf (improvesDevelopment some ResearchSkill)
+NoviceResearcher and (hasSupervisor some MicromanagingSupervisor) SubClassOf not (improvesDevelopment some ResearchSkill)
+
+************************************************************************************************************************************************
+OnlineCourse SubClassOf  (isAsEffectiveAs some InPersonCourse)
+OnlineCourse and (hasFeature some PoorInteractivity) SubClassOf not (isAsEffectiveAs some InPersonCourse)
+
+************************************************************************************************************************************************
+OpenBookExam SubClassOf (reducesRoteMemorization some Exam)
+OpenBookExam and (hasFeature some ShallowQuestions) SubClassOf not (reducesRoteMemorization some Exam)
+
+************************************************************************************************************************************************
+PeerTutoringSession SubClassOf (improvesUnderstanding some (Tutee or Tutor))
+PeerTutoringSession and (hasTutor some MisguidedTutor) SubClassOf not (improvesUnderstanding some (Tutee or Tutor))
+
+************************************************************************************************************************************************
+PhDProgram SubClassOf (hasCompletionTimeYears some xsd:int[>= "3"^^xsd:int , <= "5"^^xsd:int])
+PhDProgram and (hasCondition some FieldworkDelay) SubClassOf not (hasCompletionTimeYears some xsd:int[>= "3"^^xsd:int , <= "5"^^xsd:int])
+
+************************************************************************************************************************************************
+ProjectBasedLearning and (hasFeature some UnscaffoldedProject) SubClassOf not (increasesMotivationOf some Student)
+ProjectBasedLearning and (hasFeature some UnscaffoldedProject) SubClassOf not (increasesMotivationOf some Student)
+
+************************************************************************************************************************************************
+PublishingPhDStudent SubClassOf (hasHigherProgressLikelihood some Student)
+PublishingPhDStudent and (hasCondition some PublishPressure) SubClassOf not (hasHigherProgressLikelihood some Student)
+
+************************************************************************************************************************************************
+
+Student and (scoresOn some Exam) SubClassOf hasGraspOf some MaterialAtHighLevel
+RoteMemorizer SubClassOf Student
+RoteMemorizer and Student and (scoresOn some Exam) SubClassOf not (hasGraspOf some MaterialAtHighLevel)
+
+************************************************************************************************************************************************
+SmallClass SubClassOf (improvesOutcome some Student)
+SmallClass and (hasInstructor some InexperiencedInstructor) SubClassOf not (improvesOutcome some Student)
+
+************************************************************************************************************************************************
+SpacedRepetition SubClassOf (retainsLongTerm some Knowledge)
+SpacedRepetition and (hasCondition some PoorSpacing) SubClassOf not (retainsLongTerm some Knowledge)
+
+************************************************************************************************************************************************
