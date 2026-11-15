@@ -25,9 +25,9 @@ Ontologies provide a formal and structured means of representing domain knowledg
 
 For example:
 
-Access Control: Employees are typically permitted to access certain organisational resources, but access may be restricted under specific circumstances or overridden by more specific security policies.
-Movies: Movies typically belong to particular genres or exhibit common characteristics, although individual movies may deviate from these expectations.
-Education: Students typically follow established learning pathways, but alternative routes, exemptions, prerequisites, and individual circumstances can introduce exceptions to standard progression rules.
+1. Access Control: Employees are typically permitted to access certain organisational resources, but access may be restricted under specific circumstances or overridden by more specific security policies.
+2. Movies: Movies typically belong to particular genres or exhibit common characteristics, although individual movies may deviate from these expectations.
+3. Education: Students typically follow established learning pathways, but alternative routes, exemptions, prerequisites, and individual circumstances can introduce exceptions to standard progression rules.
 
 Representing such knowledge using only classical ontological axioms can result in overly restrictive models or require extensive enumeration of exceptional cases.
 
@@ -37,3 +37,12 @@ This repository addresses that need by providing three domain-scale ontologies d
 
 # Reasoning Infrastructure
 The ontologies are developed and investigated using the following tools and technologies:
+| Tool / Technology | Purpose |
+|---|---|
+| [Protégé](https://protege.stanford.edu/) | Ontology development, editing, and management. |
+| [OWL 2](https://www.w3.org/TR/owl2-overview/) | Formal language for representing and structuring ontological knowledge. |
+| Description Logics (DLs) | Logical foundation for ontology representation and formal reasoning. |
+| Defeasible Inference Platform [DIP](https://github.com/kodymoodley/defeasibleinferenceplatform) | Supports defeasible reasoning and inference over ontology knowledge bases. |
+| Rational Closure | Non-monotonic reasoning approach for handling default knowledge, exceptionality, and exceptions. |
+| [OOPS!](https://oops.linkeddata.es/) | Structural ontology verification and detection of potential modelling pitfalls. |
+| Competency Questions (CQs) | Validation mechanism for evaluating ontology coverage, expressivity, and reasoning outcomes. |
