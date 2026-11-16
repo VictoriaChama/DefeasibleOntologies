@@ -2,6 +2,7 @@
 <rdf:RDF xmlns="http://www.semanticweb.org/vicki/ontologies/2026/5/untitled-ontology-28/"
      xml:base="http://www.semanticweb.org/vicki/ontologies/2026/5/untitled-ontology-28/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:pav="http://purl.org/pav/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:www="http://www.cair.za.net/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -21,6 +22,7 @@
         <terms:rights>public</terms:rights>
         <terms:title>ACP-DefOnto</terms:title>
         <terms:title xml:lang="en">Access Control and Policy Defeasible Ontology (ACP-DefOnto)</terms:title>
+        <pav:version rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</pav:version>
         <rdfs:comment xml:lang="en">This ontology provides a formal representation of access control and policy mechanisms within organizational, governmental, and computational domains. It captures entities such as agents, employees, systems, and resources, along with the permissions, prohibitions, authorizations, and contextual constraints that regulate access.
 
 The ontology is designed within a defeasible reasoning framework, acknowledging that access control policies are rarely absolute. Rules typically confer rights or impose restrictions, yet they may be subject to exceptions, priority relations, and overriding conditions. For example, general access permissions can be suspended by judicial injunctions, presidential waivers, or emergency overrides.
@@ -90,6 +92,12 @@ Access control is a particularly relevant domain for defeasible reasoning becaus
     <!-- http://purl.org/dc/terms/title -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/pav/version -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/pav/version"/>
     
 
 
