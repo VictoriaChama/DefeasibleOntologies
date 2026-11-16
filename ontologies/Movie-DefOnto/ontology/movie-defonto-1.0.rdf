@@ -2,6 +2,7 @@
 <rdf:RDF xmlns="http://www.semanticweb.org/vicki/ontologies/2025/9/untitled-ontology-90/"
      xml:base="http://www.semanticweb.org/vicki/ontologies/2025/9/untitled-ontology-90/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:pav="http://purl.org/pav/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:www="http://www.cair.za.net/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -21,6 +22,7 @@ Scope &amp; Purpose:
 Usage
 This defeasible movie ontology provides a symbolic framework for reasoning about film metadata, genre–tone relationships, quality assessments, and exception-aware inferences intended for explainable classification and integration with film-data sources.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0"/>
+        <pav:version rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</pav:version>
         <rdfs:comment xml:lang="en">A defeasible ontology for movies and films that models genres, production roles, quality and recognition, narrative features, settings, and provenance-aware defeasible rules for typical but defeasible inferences about films (e.g., typical genre → expected tone, budget → box-office expectations).</rdfs:comment>
     </owl:Ontology>
     
@@ -64,6 +66,12 @@ This defeasible movie ontology provides a symbolic framework for reasoning about
     <!-- http://purl.org/dc/terms/license -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/pav/version -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/pav/version"/>
     
 
 
